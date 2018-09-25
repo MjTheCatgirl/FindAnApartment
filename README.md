@@ -1,9 +1,5 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This app should create and maintain a list of apartments, each with attributes address, city, state, #bedrooms (just called bedrooms), #bathrooms (just called bathrooms). These are stored in a sqlite3 database. I created the resource apartments with the scaffold command for ruby, so MVC code is all auto generated. I am using webpack to handle react as my frontend. This list should include the ability to edit a listing, add or delete a listing, and view each listing. 
 
 * Ruby version
 
@@ -19,6 +15,6 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions- adopt 17 cats
 
 * ...
