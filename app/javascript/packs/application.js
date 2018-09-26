@@ -9,10 +9,11 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import SampleComponent from '../components/SampleComponent';
+import Main from '../components/Main';
+import ApartmentListings from '../components/ApartmentListings';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
-  render(<SampleComponent/>, container);
+  render(<Main />, container);
 });
 
