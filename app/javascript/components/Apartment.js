@@ -33,13 +33,13 @@ constructor(props){
   	let address = this.state.editable ? <input type='text' ref={input => this.name = input} 
   	defaultValue={this.props.apartment.address}/>:<h3>{this.props.apartment.address}</h3>
     let city = this.state.editable ? <input type='text' ref={input => this.city = input} 
-    defaultValue={this.props.apartment.city}/>:<p>{this.props.apartment.city}</p>
+    defaultValue={this.props.apartment.city}/>:<h3>{this.props.apartment.city}</h3>
     let state = this.state.editable ? <input type='text' ref={input => this.state = input} 
-    defaultValue={this.props.apartment.state}/>:<p>{this.props.apartment.state}</p>
+    defaultValue={this.props.apartment.state}/>:<h3>{this.props.apartment.state}</h3>
     let bedrooms = this.state.editable ? <input type='text' ref={input => this.bedrooms = input} 
-    defaultValue={this.props.apartment.bedrooms}/>:<p>{this.props.apartment.bedrooms}</p>
+    defaultValue={this.props.apartment.bedrooms}/>:<h3>{this.props.apartment.bedrooms}</h3>
     let bathrooms = this.state.editable ? <input type='text' ref={input => this.bathrooms = input} 
-    defaultValue={this.props.apartment.bathrooms}/>:<p>{this.props.apartment.bathrooms}</p>
+    defaultValue={this.props.apartment.bathrooms}/>:<h3>{this.props.apartment.bathrooms}</h3>
 
     return(
       <div>
@@ -48,7 +48,7 @@ constructor(props){
         {state}
         {bedrooms}
         {bathrooms}
-        <button onClick={() => this.handleEdit()}>
+        <button onClick={() => this.handleEdit()}></button>
         <button>{this.state.editable? 'Submit' : 'Edit'}</button>
         <button onClick={() => this.props.handleDelete(this.props.apartment.id)}>Delete</button>
       </div>
