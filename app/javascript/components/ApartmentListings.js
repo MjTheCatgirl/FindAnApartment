@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import Apartment from '../Component/Apartment';
 
-class ApartmentListings extends React.Component {
-
 const ApartmentListings = (props) => {
   var apartments = props.apartments.map((apartment) => {
     return(
