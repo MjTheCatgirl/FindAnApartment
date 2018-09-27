@@ -73,7 +73,7 @@ handleFormSubmit(address, city, state, bedrooms, bathrooms){
       this.addNewApartment(apartment)
     })
     
-  }
+  
 }
 
 addNewApartment(apartment){
