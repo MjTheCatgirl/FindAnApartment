@@ -18,7 +18,7 @@ constructor(props) {
   }
 
   handleUpdate(apartment){
-    fetch(`http://localhost:5000/apartments/${apartment.id}`, 
+    fetch('http://localhost:5000/apartments/${apartment.id}', 
     {
       method: 'PUT',
       body: JSON.stringify({apartment: apartment}),
@@ -41,7 +41,7 @@ constructor(props) {
 
 
   handleDelete(id){
-    fetch(`http://localhost:5000/apartments/${id}`, 
+    fetch('http://localhost:5000/apartments/${id}', 
     {
       method: 'DELETE',
       headers: {
@@ -64,7 +64,7 @@ handleFormSubmit(address, city, state, bedrooms, bathrooms){
       bedrooms: bedrooms, bathrooms: bathrooms} })
 }
 
-fetch(`http://localhost:5000/apartments`, {
+fetch('http://localhost:5000/apartments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
