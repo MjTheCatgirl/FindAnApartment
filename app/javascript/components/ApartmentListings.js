@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Apartment from '../component/Apartment';
+import Apartment from '../components/Apartment';
 
 const ApartmentListings = (props) => {
   var apartments = props.apartments.map((apartment) => {
