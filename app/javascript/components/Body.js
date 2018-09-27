@@ -78,9 +78,9 @@ handleFormSubmit(address, city, state, bedrooms, bathrooms){
 
 addNewApartment(apartment){
     this.setState({
-      apartments: this.state.apartment.concat(apartment)
+      apartments: this.state.apartments.concat(apartment)
     })
-  }
+}
 
 componentDidMount(){
     fetch(`/apartments.json`)
