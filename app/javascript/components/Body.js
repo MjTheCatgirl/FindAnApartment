@@ -62,9 +62,7 @@ constructor(props) {
 handleFormSubmit(address, city, state, bedrooms, bathrooms){
     let body = JSON.stringify({apartment: {address: address, city: city, state: state,
       bedrooms: bedrooms, bathrooms: bathrooms} })
-}
-
-fetch(`http://localhost:5000/apartments`, {
+    fetch(`http://localhost:5000/apartments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -76,6 +74,7 @@ fetch(`http://localhost:5000/apartments`, {
     })
     
   }
+}
 
 addNewApartment(apartment){
     this.setState({
@@ -84,7 +83,7 @@ addNewApartment(apartment){
   }
 
 componentDidMount(){
-    fetch({`/apartments.json`})
+    fetch(`/apartments.json`)
       .then((response) => {return response.json()})
       .then((data) => {this.setState({ apartments: data }) });
   }
