@@ -1,22 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from '../components/Modal';
 
-const NewApartment = (props) => {
-  let formFields = {}
- 
-  return(
-    <form onSubmit={ (e) => { props.handleFormSubmit(formFields.address.value, 
-    	formFields.city.value, formFields.state.value, formFields.bedrooms.value,
-    	formFields.bathrooms.value); e.target.reset();}
-	}>
-     <input ref={input => formFields.address = input} placeholder='Address: '/>
-     <input ref={input => formFields.city = input} placeholder='City: ' />
-     <input ref={input => formFields.state = input} placeholder='State: '/>
-     <input ref={input => formFields.bedrooms = input} placeholder='Number of Bedrooms: '/>
-     <input ref={input => formFields.bathrooms = input} placeholder='Number of Bathrooms: '/>
-     <button>Submit</button>
-    </form>
-  )
+class NewApartment extends Component {
+  state = { show: false };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
+  render() {
+    return (
+      <main>
+        <h1>React Modal</h1>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+        </Modal>
+        <button type="button" onClick={this.showModal}>
+          open
+        </button>
+      </main>
+    );
+  }
 }
 
 export default NewApartment;
