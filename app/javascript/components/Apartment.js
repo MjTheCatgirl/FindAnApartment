@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import NewApartment from '../components/NewApartment';
+import Modal from '../components/Modal';
 
 class Apartment extends React.Component{
   

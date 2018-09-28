@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from '../components/Modal';
 
-class NewApartment extends Component {
+class NewApartment extends React.Component {
   state = { show: false };
 
   showModal = () => {
@@ -17,7 +17,7 @@ class NewApartment extends Component {
     return (
       <main>
         <h1>React Modal</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
+        <Modal className="modal" show={this.state.show} handleClose={this.hideModal}>
           <p>Modal</p>
         </Modal>
         <button type="button" onClick={this.showModal}>

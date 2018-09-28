@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Apartment from '../components/Apartment';
 import ApartmentListings from '../components/ApartmentListings';
 import NewApartment from '../components/NewApartment';
+import Modal from '../components/Modal';
 
 class Body extends React.Component {
 constructor(props) {
@@ -90,7 +92,7 @@ componentDidMount(){
 render(){
     return(
       <div>
-        <NewApartment handleFormSubmit={this.handleFormSubmit}/>
+        <NewApartment />
         <ApartmentListings apartments={this.state.apartments} handleDelete={this.handleDelete} 
         handleUpdate = {this.handleUpdate}/>
       </div>

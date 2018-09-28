@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Apartment from '../components/Apartment';
+import NewApartment from '../components/NewApartment';
+import Modal from '../components/Modal';
 
 const ApartmentListings = (props) => {
   var apartments = props.apartments.map((apartment) => {
