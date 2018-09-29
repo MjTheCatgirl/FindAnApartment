@@ -17,9 +17,8 @@ class NewApartment extends React.Component {
   render() {
     return (
       <main>
-        <h1>React Modal</h1>
         <Modal className="modal" show={this.state.show} handleClose={this.hideModal}>
-          <NewAptForm />
+          <NewAptForm handleFormSubmit={this.handleFormSubmit}/>
         </Modal>
         <button type="button" onClick={this.showModal}>
           add new listing

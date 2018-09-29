@@ -16,7 +16,8 @@ constructor(props) {
     this.handleDelete = this.handleDelete.bind(this);
     this.deleteApartment = this.deleteApartment.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
-    this.updateApartment = this.updateApartment.bind(this)
+    this.updateApartment = this.updateApartment.bind(this);
+
   }
 
   handleUpdate(apartment){
@@ -92,9 +93,9 @@ componentDidMount(){
 render(){
     return(
       <div>
-        <NewApartment />
+        <NewApartment handleFormSubmit={this.handleFormSubmit}/>
         <ApartmentListings apartments={this.state.apartments} handleDelete={this.handleDelete} 
-        handleUpdate = {this.handleUpdate}/>
+        handleUpdate = {this.handleUpdate} handleFormSubmit={this.handleFormSubmit}/>
       </div>
     )
   }
