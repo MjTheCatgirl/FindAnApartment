@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from '../components/Modal';
+import NewAptForm from '../components/NewAptForm';
 
 class NewApartment extends React.Component {
   state = { show: false };
@@ -18,10 +19,10 @@ class NewApartment extends React.Component {
       <main>
         <h1>React Modal</h1>
         <Modal className="modal" show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
+          <NewAptForm />
         </Modal>
         <button type="button" onClick={this.showModal}>
-          open
+          add new listing
         </button>
       </main>
     );
